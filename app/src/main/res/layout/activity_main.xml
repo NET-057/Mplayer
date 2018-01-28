@@ -1,0 +1,140 @@
+<RelativeLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/playerimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+             android:src="@drawable/player"/>
+
+        <SeekBar
+            android:id="@+id/musicseekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerimage"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/timestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/musicseekbar"
+            android:layout_marginTop="15dp"
+            android:text="Start" />
+
+        <TextView
+            android:id="@+id/totaltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/musicseekbar"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:text="End" />
+
+
+        <Button
+            android:id="@+id/playandpause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/musicseekbar"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/play" />
+
+
+        <SeekBar
+            android:id="@+id/volumeseek"
+            android:layout_width="match_parent"
+            android:layout_below="@id/playandpause"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <Button
+            android:id="@+id/voloff"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/playandpause"
+            android:background="@drawable/volumeoff"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/volon"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_below="@id/playandpause"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/volume_up"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/totalvol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voloff"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/currentvol"
+            android:text="Total volume :" />
+
+        <TextView
+            android:id="@+id/currentvol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignBaseline="@+id/totalvol"
+            android:layout_alignBottom="@+id/totalvol"
+            android:layout_toEndOf="@+id/playandpause"
+            android:text="0/0" />
+
+
+
+
+            <!--<Button-->
+                <!--android:id="@+id/button4"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_below="@id/textView5"-->
+                <!--android:text="Start" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/button5"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_below="@id/textView5"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:onClick="pause"-->
+                <!--android:text="Pause" />-->
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totalvol"
+            android:layout_marginTop="10dp"
+            android:text="Select Song"
+            android:onClick="selectsong"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
